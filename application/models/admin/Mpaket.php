@@ -41,7 +41,8 @@ class Mpaket extends CI_Model {
 	function ambil_detail_paket($id_paket)
 	{
 		
-		$this->db->where('id_paket', $id_paket);
+		$this->db->where('tipe_paket.id_paket', $id_paket);
+		$this->db->join('paket', 'tipe_paket.id_paket = paket.id_paket', 'left');
 		$ambil = $this->db->get('tipe_paket');
 		return $ambil->result_array();
 	}

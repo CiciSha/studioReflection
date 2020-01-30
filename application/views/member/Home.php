@@ -1,5 +1,5 @@
     <!-- bagian konten -->
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url('../assets/image/paket/1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url('<?php echo base_url("./assets/image/paket/graduation.jpg") ?>');" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7 text-center" data-aos="fade-up">
@@ -23,40 +23,36 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6">
-            <div class="site-block-half d-lg-flex">
-              <div class="image" style="background-image: url('../assets/image/blog/photographer.png');"></div>
-              <div class="text">
-                <h3>Pengalaman Professional</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-            </div>
-            <div class="site-block-half d-lg-flex">
-              <div class="image" style="background-image: url('../assets/image/blog/photo-camera.png');"></div>
-              <div class="text">
-                <h3>Fotographer Berpengalaman</h3>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
+          <div class="col-md-3">
+            <img style="max-width: 65px" src="<?php echo base_url('./assets/image/blog/photographer.png') ?>">
+            <div class="text">
+              <h3>Pengalaman Professional</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="site-block-half d-lg-flex">
-              <div class="image" style="background-image: url('../assets/image/blog/studio.png');"></div>
-              <div class="text">
-                <h3>Studio Foto Premium</h3>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
+          <div class="col-md-3">
+            <img style="max-width: 65px" src="<?php echo base_url('./assets/image/blog/photo-camera.png') ?>">
+            <div class="text">
+              <h3>Fotographer Berpengalaman</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="site-block-half d-lg-flex">
-              <div class="image" style="background-image: url('../assets/image/blog/offer.png');"></div>
-              <div class="text">
-                <h3>Harga Ekonomis</h3>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
+          </div>
+          <div class="col-md-3">
+            <img style="max-width:65px " src="<?php echo base_url('./assets/image/blog/studio.png') ?>">
+            <div class="text">
+              <h3>Studio Foto Premium</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img style="max-width: 65px" src="<?php echo base_url('./assets/image/blog/offer.png') ?>" >
+            <div class="text">
+              <h3>Harga Ekonomis</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
         </div>
@@ -80,89 +76,20 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a class="image-gradient" href="single.html">
-              <figure>
-                <img src="../assets/image/paket/Graduation.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Graduation & Family</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>
+          <?php foreach ($paket as $key => $value): ?>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <a class="image-gradient" href="<?php echo base_url("member/detail_paket/$value[id_paket]") ?>" >
+                <figure style="align-content: center;">
+                  <img src="<?php echo base_url("./assets/image/paket/$value[foto_paket]") ?>" alt="" class="img-fluid">
+                </figure>
+                <div class="text">
+                  <h3>Prewedding Indoor</h3>
+                  <!-- <span>5 photos / Nature</span> -->
+                </div>
+              </a>
+            </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a class="image-gradient" href="single.html">
-              <figure>
-                <img src="../assets/image/paket/Maternity.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Maternity & Baby</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="single.html">
-              <figure>
-                <img src="../assets/image/paket/Group.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Personal</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="single.html">
-              <figure>
-                <img src="../assets/image/paket/Couple.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Couple</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="single.html">
-              <figure>
-                <img src="../assets/image/paket/Group.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Group</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="single.html">
-              <figure>
-                <img src="../assets/image/paket/Group.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Pas Foto</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="single.html" >
-              <figure style="align-content: center;">
-                <img src="../assets/image/paket/Prewed_indoor.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Prewedding Indoor</h3>
-                <!-- <span>5 photos / Nature</span> -->
-              </div>
-            </a>
-          </div>  
+          <?php endforeach ?>  
         </div>
       </div>
     </div>

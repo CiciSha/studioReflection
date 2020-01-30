@@ -4,13 +4,11 @@
 </div>
 </div>
 </nav>
-
 <?php if (empty($detail_studio)): ?>
 	<div class="alert alert-danger">Data Tidak Tersedia</div>
 <?php else: ?>
 	<p>Studio : <?php echo $detail_studio[0]['nama_studio'] ?> </p>
 <?php endif ?>
-
 <!-- breadcrumb -->
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
@@ -40,7 +38,7 @@
 				<td><?php echo $value ['nama_background']; ?></td>
 				<td><?php echo $value ['foto_background']; ?></td>
 				<td style="text-align: center;">
-					<a href="<?php echo base_url("admin/studio/tampil_edit_studio/$value[id_detail_studio]")?>" class="btn btn-info btn-xs">Edit</a>
+					<a href="<?php echo base_url("admin/studio/edit_detail_studio/$value[id_detail_studio]")?>" class="btn btn-info btn-xs">Edit</a>
 					<a href="<?php echo base_url("admin/studio/")?>" class="btn btn-warning btn-xs">Hapus</a>
 				</td>
 			</tr>

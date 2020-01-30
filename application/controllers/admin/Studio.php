@@ -92,7 +92,26 @@ class Studio extends CI_Controller
 		$this->load->view('admin/template/Header');
 		$this->load->view('admin/studio/Edit_studio',$data);
 		$this->load->view('admin/template/Footer');
-}
+	}
+	function edit_detail_studio($id_detail_studio)
+	{
+		{
+			$data ['detail_studio'] = $this->Mstudio->ambil_detail_studio($id_detail_studio);
+			$input = $this->input->post();
+			if ($input) 
+			{
+				$id_detail_studio = $data['detail_studio']['id_detail_studio'];
+				$this->Mstudio->ubah_detail_studio($input,$id_detail_studio);
+				redirect("admin/studio/tampil_detail_studio/$id_detail_studio",'refresh');
+			} 
+
+
+			$this->load->view('admin/template/Header');
+			$this->load->view('admin/studio/edit_detail_studio',$data);
+			$this->load->view('admin/template/Footer');
+
+		}
+	}
 
 	
 

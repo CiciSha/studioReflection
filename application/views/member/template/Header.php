@@ -71,8 +71,9 @@
                     <li><a href="#">Prewedding Indoor</a></li>
                   </ul>
                 </li>
-                <li><a href="services.html">Konfirmasi Pembayaran</a></li>
                 <li><a href="<?php echo base_url("member/tentang") ?>">Tentang</a></li>
+                <li><a href="services.html">Konfirmasi Pembayaran</a></li>
+                
 
               </ul>
             </nav>
@@ -83,28 +84,32 @@
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 
               <?php if (isset($_SESSION['member'])): ?>
-                  <li class="col-md-10">
+                  <div class="row">
+                    <li class="col-md-6">
                   <a href="<?php echo base_url("member/member") ?>">
+                    <img src="<?php echo base_url("./assets/image/icon/user (1).png") ?>" style="max-width: 25%;" alt="">
                     <?php echo $_SESSION['member']['nama_member']; ?>
                   </a>
                 </li>
 
-                <li>
-                  <a href="<?php echo base_url("member/home/logout") ?>" class="pl-3 pr-3">
+                <li class="col-md-6" style="padding-right: 0px">
+                  <a href="<?php echo base_url("member/home/logout") ?>">
+                    <img src="<?php echo base_url('./assets/image/icon/user (2).png') ?>" style="max-width: 25%;" alt="">
                    Logout
                   </a>
                 </li>
+                  </div>
                 
               <?php else: ?>
                   <li>
                   <a href="<?php echo base_url("member/registrasi") ?>" class="pl-0 pr-3"> 
-                    <img src="<?php echo base_url("assets/image/icon/sign-up.png") ?>" style="max-width: 50%;" alt="">
+                    <img src="<?php echo base_url("assets/image/icon/sign-up.png") ?>" style="max-width: 35%;" alt="">
                   </a>
                 </li>
 
                 <li>
                   <a href="<?php echo base_url("login") ?>" class="pl-3 pr-3">
-                    <img src="<?php echo base_url("assets/image/icon/user.png") ?>" style="max-width: 50%;" alt="">
+                    <img src="<?php echo base_url("assets/image/icon/user.png") ?>" style="max-width: 35%;" alt="">
                   </a>
                 </li>
                 

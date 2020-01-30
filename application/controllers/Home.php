@@ -5,8 +5,11 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('admin/Mpaket');
+		$data['paket'] = $this->Mpaket->getAllPaket();
+
 		$this->load->view('member/template/Header');
-		$this->load->view('member/Home');
+		$this->load->view('member/Home',$data);
 		$this->load->view('member/template/Footer');
 	}
 

@@ -24,7 +24,7 @@ class Mstudio extends CI_Model {
 		$this->db->join('studio', 'detail_studio.id_studio=studio.id_studio', 'left');
 
 		$ambil = $this->db->get('detail_studio');
-	
+
 		return $ambil->result_array();
 
 	}
@@ -68,6 +68,38 @@ class Mstudio extends CI_Model {
 		$this->db->where('id_studio', $id_studio);
 		$this->db->update('studio', $input);
 	}
+	function ubah_detail_studio($input, $id_detail_studio)
+	{
+		$config['upload_path'] = './assets/image/studio/';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+
+
+		$this->load->library('upload', $config);
+
+
+		$mengupload = $this->upload->do_upload("foto_background");
+		if ($mengupload) 
+		{
+			$detail = $this->ambil_detail_studio($id_detail_studio);
+			$foto_hapus = $detail['foto_background'];
+			if ($foto_hapus) 
+			{
+				unlink("./assets/image/studio/$foto_hapus");
+			}
+
+			$input['foto_background'] = $this->upload->data("file_name");
+			$this->db->where('id_detail_studio', $id_detail_studio);
+			$this->db->update('detail_studio', $input);
+		}
+		else
+		{
+			$this->db->where('id_detail_studio', $id_detail_studio);
+			$this->db->update('detail_studio', $input);
+		}
+
+	}
+
+
 
 
 }
