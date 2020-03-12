@@ -18,7 +18,7 @@
     <li class="breadcrumb-item btn-link">
         <a href="<?php echo base_url("admin/studio") ?>">Studio</a>
 	</li>
-    <li class="breadcrumb-item active" aria-current="page"> Detail Studio</li>
+    <li class="breadcrumb-item active" aria-current="page">Detail Studio</li>
 </ol>
 </nav>
 
@@ -36,7 +36,9 @@
 			<tr>
 				<td> <?php echo $key+1; ?></td>
 				<td><?php echo $value ['nama_background']; ?></td>
-				<td><?php echo $value ['foto_background']; ?></td>
+				<td class="gambar-paket">
+					<img src="<?php echo base_url("assets/image/studio/$value[foto_background]") ?>" width="150">
+				</td>
 				<td style="text-align: center;">
 					<a href="<?php echo base_url("admin/studio/edit_detail_studio/$value[id_detail_studio]")?>" class="btn btn-info btn-xs">Edit</a>
 					<a href="<?php echo base_url("admin/studio/")?>" class="btn btn-warning btn-xs">Hapus</a>

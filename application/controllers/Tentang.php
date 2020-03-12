@@ -5,7 +5,10 @@ class Tentang extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('member/template/Header');
+		$this->load->model('admin/Mpaket');
+		$data['paket'] = $this->Mpaket->getAllPaket();
+
+		$this->load->view('member/template/Header',$data);
 		$this->load->view('member/Tentang');
 		$this->load->view('member/template/Footer');
 	}

@@ -90,6 +90,9 @@ class Mstudio extends CI_Model {
 			$input['foto_background'] = $this->upload->data("file_name");
 			$this->db->where('id_detail_studio', $id_detail_studio);
 			$this->db->update('detail_studio', $input);
+			echo "<pre>";
+			print_r ($input);
+			echo "</pre>";
 		}
 		else
 		{
@@ -98,7 +101,11 @@ class Mstudio extends CI_Model {
 		}
 
 	}
-
+	function tampil_detail_studio()
+	{
+		$ambil = $this->db->get('detail_studio');
+		return $ambil->result_array();
+	}
 
 
 

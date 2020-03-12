@@ -1,7 +1,7 @@
 <div
     class="collapse navbar-collapse"
     id="navbarSupportedContent"> &nbsp;
-    <h3 style="text-align: right !important;">Reshcedule Tanggal Booking</h3>
+    <h3 style="text-align: right !important;">Reschedule Tanggal Booking</h3>
 </div>
 </div>
 </nav>
@@ -11,7 +11,7 @@
 		<label>Tanggal Booking</label>
 		<input type="date" name="tanggal_booking" class="form-control" value="<?php echo $pemesanan['tanggal_booking'] ?>">
 	</div>
-	<button  class=" btn btn-warning">Ubah</button>
+	<button  class="btn btn-warning">Ubah</button>
 </form> 
 
 </div> 

@@ -1,9 +1,9 @@
 
 <div
-    class="collapse navbar-collapse"
-    id="navbarSupportedContent"
-    style="text-align: right !important;">
-    <span >Tambah Detail Tipe Paket</span>
+class="collapse navbar-collapse"
+id="navbarSupportedContent"
+style="text-align: right !important;">
+<span>Tambah Detail Tipe Paket</span>
 </div>
 </div>
 </nav>
@@ -33,6 +33,21 @@
 	<div class="form-group">
 		<label>Minimal DP</label>
 		<input type="number" name="min_dp_tipe_paket" class="form-control" placeholder="Example:150000">
+	</div>
+
+	<div class="form-group">
+		<label>Max Jumlah Orang</label>
+		<input type="number" name="max_jumlah_orang" class="form-control" placeholder="1,2,3">
+	</div>
+
+	<div class="form-group">
+		<label>Max Jumlah Pose</label>
+		<input type="number" name="max_pose" class="form-control" placeholder="1,2,3">
+	</div>
+
+	<div class="form-group">
+		<label>Max Jumlah File</label>
+		<input type="number" name="max_file" class="form-control" placeholder="1,2,3">
 	</div>
 
 	<div class="form-group">

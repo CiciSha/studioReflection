@@ -14,8 +14,7 @@ class Paket extends CI_Controller {
 		$this->load->model('admin/Mpaket');
 		$this->load->library('form_validation');
 		$this->load->helper('url_helper');
-
-
+		$this->load->model('admin/Mstudio');
 	}
 
 	public function index()
@@ -118,12 +117,33 @@ class Paket extends CI_Controller {
 			$this->Mpaket->ubah_tipe_paket($input,$id_tipe_paket);
 			redirect("admin/paket/tampil_detail_paket/$id_paket",'refresh');
 		} 
+		$data ['id_paket'] = $data['tipe_paket']['id_paket'];
 
 		
 		$this->load->view('admin/template/Header');
 		$this->load->view('admin/paket/Edit_detail_paket',$data);
 		$this->load->view('admin/template/Footer');
+	}
+	function studio($id_tipe_paket)
+	{
 
+		$input = $this->input->post();
+		if ($input) 
+		{
+			$this->Mpaket->simpan_paket_studio($id_tipe_paket,$input);
+			redirect('admin/paket','refresh');
+		}
+
+		$data['studio'] = $this->Mstudio->tampil_studio();
+		$data['paket'] = $this->Mpaket->ambil_tipe_paket($id_tipe_paket);
+		echo "<pre>";
+		print_r ($data['paket']);
+		echo "</pre>";
+		$data['paket_studio'] = $this->Mpaket->ambil_paket_studio($id_tipe_paket);
+
+		$this->load->view('admin/template/Header');
+		$this->load->view('admin/paket/studio',$data);
+		$this->load->view('admin/template/Footer');
 	}
 
 }

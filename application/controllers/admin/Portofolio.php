@@ -11,6 +11,7 @@ class Portofolio extends CI_Controller {
 			redirect('login','refresh');
 		}
 		$this->load->model('admin/Mportofolio');
+		$this->load->model('admin/Mpaket');
 	}
 
 	public function index()
@@ -46,8 +47,9 @@ class Portofolio extends CI_Controller {
 			$this->Mportofolio->simpan_portofolio($input);
 			redirect('admin/portofolio','refresh');
 		}
+		$data['paket'] = $this->Mpaket->getAllPaket();
 		$this->load->view('admin/template/Header');
-		$this->load->view('admin/portofolio/Tambah_portofolio');
+		$this->load->view('admin/portofolio/Tambah_portofolio',$data);
 		$this->load->view('admin/template/Footer');
 	}
 
@@ -62,7 +64,7 @@ class Portofolio extends CI_Controller {
 	// 	}
 
 	// 	$data ['portofolio'] = $this->Mportofolio->ambil_portofolio($id_portofolio);
-		
+	
 	// 	$this->load->view('admin/template/Header');
 	// 	$this->load->view('admin/portofolio/Edit_portofolio',$data);
 	// 	$this->load->view('admin/template/Footer');

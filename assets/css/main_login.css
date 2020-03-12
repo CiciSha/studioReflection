@@ -5,10 +5,10 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
-@font-face {
+/*@font-face {
   font-family: OpenSans-Regular;
   src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
-}
+}*/
 
 
 
@@ -23,12 +23,12 @@
 
 body, html {
 	height: 100%;
-	font-family: OpenSans-Regular, sans-serif;
+/*	font-family: OpenSans-Regular, sans-serif;*/
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: OpenSans-Regular;
+	/*font-family: OpenSans-Regular;*/
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -53,7 +53,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: OpenSans-Regular;
+	/*font-family: OpenSans-Regular;*/
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -109,14 +109,14 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: OpenSans-Regular;
+/*  font-family: OpenSans-Regular;*/
   font-size: 15px;
   line-height: 1.4;
   color: #999999;
 }
 
 .txt2 {
-  font-family: OpenSans-Regular;
+  /*font-family: OpenSans-Regular;*/
   font-size: 15px;
   line-height: 1.4;
   color: purple;
@@ -338,7 +338,7 @@ textarea.input100 {
   height: 60px;
   background-color:  #7349d6;
 
-  font-family: OpenSans-Regular;
+/*  font-family: OpenSans-Regular;*/
   font-size: 14px;
   color: #fff;
   line-height: 1.2;
@@ -379,7 +379,7 @@ textarea.input100 {
   right: 12px;
   pointer-events: none;
 
-  font-family: OpenSans-Regular;
+/*  font-family: OpenSans-Regular;*/
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
@@ -396,7 +396,7 @@ textarea.input100 {
 
 .alert-validate::after {
   content: "\f12a";
-  font-family: FontAwesome;
+/*  font-family: FontAwesome;*/
   display: block;
   position: absolute;
   color: #c80000;

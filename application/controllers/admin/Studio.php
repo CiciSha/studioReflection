@@ -61,14 +61,14 @@ class Studio extends CI_Controller
 		$input = $this->input->post();
 		if ($input) 
 		{
-			$this->form_validation->set_rules('nama_background', 'Nama Background', 'is_unique[detail_studio.nama_background]');
+			// $this->form_validation->set_rules('nama_background', 'Nama Background', 'is_unique[detail_studio.nama_background]');
 
-			$this->form_validation->set_message('is_unique','%s sudah Terdaftar');
-			if ($this->form_validation->run() == TRUE ) 
-			{
+			// $this->form_validation->set_message('is_unique','%s sudah Terdaftar');
+			// if ($this->form_validation->run() == TRUE ) 
+			// {
 				$this->Mstudio->simpan_detail_studio($input, $id_studio);
 				redirect("admin/studio/Tampil_detail_studio/$id_studio",'refresh');
-			} 
+			// } 
 		}
 		
 		$this->load->view('admin/template/Header');
@@ -88,29 +88,27 @@ class Studio extends CI_Controller
 			redirect("admin/studio",'refresh');
 		} 
 
-		
 		$this->load->view('admin/template/Header');
 		$this->load->view('admin/studio/Edit_studio',$data);
 		$this->load->view('admin/template/Footer');
 	}
 	function edit_detail_studio($id_detail_studio)
 	{
-		{
 			$data ['detail_studio'] = $this->Mstudio->ambil_detail_studio($id_detail_studio);
 			$input = $this->input->post();
 			if ($input) 
 			{
-				$id_detail_studio = $data['detail_studio']['id_detail_studio'];
+				$id_studio = $data['detail_studio']['id_studio'];
 				$this->Mstudio->ubah_detail_studio($input,$id_detail_studio);
-				redirect("admin/studio/tampil_detail_studio/$id_detail_studio",'refresh');
-			} 
+				redirect("admin/studio/tampil_detail_studio/$id_studio",'refresh');
+			}
+			 // TAMBAHAN CICI YANG MASIH EROR
+			$data ['id_studio'] = $data['detail_studio']['id_studio'];
 
 
 			$this->load->view('admin/template/Header');
 			$this->load->view('admin/studio/edit_detail_studio',$data);
 			$this->load->view('admin/template/Footer');
-
-		}
 	}
 
 	

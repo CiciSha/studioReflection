@@ -6,6 +6,17 @@ style="text-align: right !important;">
     </div>
   </div>
 </nav>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+    <li class="breadcrumb-item btn-link">
+        <a href="<?php echo base_url("admin/home")?>">Beranda</a>
+    </li>
+    <li class="breadcrumb-item btn-link">
+        <a href="<?php echo base_url("admin/paket") ?>">Paket</a>
+	</li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Paket</li>
+</ol>
+</nav>
 <form method="post"  enctype="multipart/form-data">
 	<div class="form-group">
 		<label>Paket</label>

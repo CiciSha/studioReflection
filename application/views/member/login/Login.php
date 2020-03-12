@@ -31,7 +31,7 @@
 	<style>
 		.limiter
 		{
-			background-image: url('<?php echo base_url("assets/image/hero_bg_2.jpg") ?>');
+			background-image: url('<?php echo base_url("assets/image/slider/Graduation.jpg") ?>');
 		}
 		
 	</style>
@@ -67,17 +67,16 @@
 							Forgot
 						</span>
 
-						<a href="#" class="txt2 hov1">
+						<a href="<?php echo base_url("member/lupa_password") ?>" class="txt2 hov1">
 							Password?
 						</a>
 					</div>
-
 					<div class="text-center">
 						<span class="txt1">
 							Create an account?
 						</span>
 
-						<a href="#" class="txt2 hov1">
+						<a href="<?php echo base_url("registrasi") ?>" class="txt2 hov1">
 							Sign up
 						</a>
 					</div>

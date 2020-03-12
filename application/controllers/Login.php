@@ -22,7 +22,7 @@ class Login extends CI_Controller {
 			}
 			elseif ($hasil_login=="sukses-member")
 			{
-				redirect('member/home','refresh');
+				redirect('home','refresh');
 			}
 			elseif ($hasil_login=="gagal") 
 			{

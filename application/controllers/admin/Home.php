@@ -18,7 +18,6 @@ class Home extends CI_Controller {
 		$this->load->view('admin/template/Header');
 		$this->load->view('admin/Home');
 		$this->load->view('admin/template/Footer');
-
 	}
 
 	function logout()

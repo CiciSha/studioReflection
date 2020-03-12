@@ -20,7 +20,9 @@
 		<?php foreach ($portofolio as $key => $value): ?>
 			<tr>
 				<td><?php echo $key+1; ?></td>
-				<td><?php echo $value ['foto'] ?></td>
+				<td class="gambar-paket">
+					<img src="<?php echo base_url("assets/image/portofolio/$value[foto]") ?>" width="150">
+				</td>
 				<td><?php echo $value ['keterangan']; ?></td>
 				<td>
 					<a href="<?php echo base_url("admin/portofolio/tampil_edit_portofolio/$value[id_portofolio]")?>" class="btn btn-warning btn-xs">Edit</a>

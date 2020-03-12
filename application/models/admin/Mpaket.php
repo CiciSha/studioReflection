@@ -5,7 +5,6 @@ class Mpaket extends CI_Model {
 
 	public function getAllPaket() 
 	{
-		
 		$ambil = $this->db->get("paket");
 		return $ambil->result_array();
 	}
@@ -138,11 +137,65 @@ class Mpaket extends CI_Model {
 		}
 
 	}
+	function simpan_paket_studio($id_tipe_paket,$input)
+	{
+		foreach ($input['id_studio'] as $key => $value) 
+		{
+			$inputan['id_studio'] = $value;
+			$inputan['id_tipe_paket'] = $id_tipe_paket;
+			$this->db->insert('paket_studio', $inputan);
+		}
+	}
+	function ambil_paket_studio($id_tipe_paket)
+	{
+		$this->db->join('studio', 'paket_studio.id_studio = studio.id_studio', 'left');
+		$this->db->where('paket_studio.id_tipe_paket', $id_tipe_paket);
+		$ambil = $this->db->get('paket_studio');
+		return $ambil->result_array();
+	}
+	function cek_jumlah_orang($id_tipe_paket)
+	{
+		$this->db->where('id_tipe_paket', $id_tipe_paket);
+		$ambil = $this->db->get('tipe_paket');
+		return $ambil->row_array();
+	}
+	function simpan_reservasi_paket($input)
+	{
+		$pemesanan['id_member'] =  $_SESSION['member']['id_member'];
+		$pemesanan['id_tipe_paket'] = $input['id_tipe_paket'];
+		$pemesanan['kode_pemesanan'] =  RandomString();
+		$pemesanan['tanggal_pemesanan'] = date("Y-m-d");
+		$pemesanan['tanggal_booking'] = $input['tanggal_booking'];
+		$pemesanan['status_pemesanan'] = "Pending";
+		$pemesanan['jumlah_orang'] = $input['jumlah_orang'];
+		$pemesanan['total_bayar'] = $input['total_bayar'];
 
+		$this->db->insert('pemesanan', $pemesanan);
+		$id_pemesanan = $this->db->insert_id();
 
+		$hitung = count($input['id_detail_studio']);
 
+		if ($hitung==1) 
+		{
+			$detail['id_pemesanan'] = $id_pemesanan;
+			$detail['id_detail_studio'] = $input['id_detail_studio']; 
+			$this->db->insert('detail_pemesanan', $detail);
+		} 
+		else 
+		{
+			foreach ($input['id_detail_studio'] as $key => $value) 
+			{
+				$detail['id_pemesanan'] = $id_pemesanan;
+				$detail['id_detail_studio'] = $value; 
+				$this->db->insert('detail_pemesanan', $detail);
+			}
+		}
+		
 
-
+		unset($input['id']);
+		unset($input['id_studio']);
+		unset($input['harga_tambahan']);
+	}
 }
 
 /* End of file Mpaket.php */

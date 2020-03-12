@@ -1,16 +1,38 @@
     <!-- bagian konten -->
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url('<?php echo base_url("./assets/image/paket/graduation.jpg") ?>');" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-7 text-center" data-aos="fade-up">
-            <h1>Welcome to Reflection Photography</h1>
+       <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url('<?php echo base_url("./assets/image/slider/Family.jpg") ?>');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade-up">
+              <h1>Welcome to Reflection Photography</h1>
+            </div>
           </div>
         </div>
       </div>
+   
+   
+   <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./assets/image/slider/Family.jpg" alt="First slide" style="width: 100%;height: 600px;">
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./assets/image/slider/Family.jpg" alt="Second slide" style="width: 100%;height: 600px;">
+      </div>
+ 
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> -->
 
     <div class="site-block-profile-pic" data-aos="fade" data-aos-delay="200">
-      <a href="about.html"><img src="<?php echo base_url("assets/image/pic.png") ?>" alt="Image"></a>
+      <a href="about.html"><img src="<?php echo base_url("assets/image/blog/tourist.png") ?>" alt="Image"></a>
     </div>
 
     <div class="site-section" data-aos="fade">
@@ -20,37 +42,41 @@
           <div class="col-12">
             <h5 class="site-section-heading text-center">Mengapa Reflection Photography?</h5>
           </div>
-        </div>
+        </div><br><br>
 
         <div class="row">
           <div class="col-md-3">
-            <img style="max-width: 65px" src="<?php echo base_url('./assets/image/blog/photographer.png') ?>">
-            <div class="text">
-              <h3>Pengalaman Professional</h3>
+            <img class="mx-auto d-block" style="max-width: 65px;" src="<?php echo base_url('./assets/image/blog/photographer.png') ?>">
+            <div class="text-center"><br>
+              <h5>Pengalaman</h5>
+              <h5>Profesional</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-md-3">
-            <img style="max-width: 65px" src="<?php echo base_url('./assets/image/blog/photo-camera.png') ?>">
-            <div class="text">
-              <h3>Fotographer Berpengalaman</h3>
+            <img class="mx-auto d-block" style="max-width: 65px;" src="<?php echo base_url('./assets/image/blog/photo-camera.png') ?>">
+            <div class="text-center"><br>
+              <h5>Fotographer</h5>
+              <h5>Berpengalaman</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-md-3">
-            <img style="max-width:65px " src="<?php echo base_url('./assets/image/blog/studio.png') ?>">
-            <div class="text">
-              <h3>Studio Foto Premium</h3>
+            <img class="mx-auto d-block" style="max-width: 65px;" src="<?php echo base_url('./assets/image/blog/studio.png') ?>">
+            <div class="text-center"><br>
+              <h5>Studio Foto</h5>
+              <h5>Premium</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="col-md-3">
-            <img style="max-width: 65px" src="<?php echo base_url('./assets/image/blog/offer.png') ?>" >
-            <div class="text">
-              <h3>Harga Ekonomis</h3>
+            <img class="mx-auto d-block" style="max-width: 65px;" src="<?php echo base_url('./assets/image/blog/offer.png') ?>" >
+            <div class="text-center"><br>
+              <h5>Harga</h5>
+              <h5>Ekonomis</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -83,48 +109,38 @@
                   <img src="<?php echo base_url("./assets/image/paket/$value[foto_paket]") ?>" alt="" class="img-fluid">
                 </figure>
                 <div class="text">
-                  <h3>Prewedding Indoor</h3>
-                  <!-- <span>5 photos / Nature</span> -->
+                  <h3><?php echo $value['nama_paket'] ?></h3>
                 </div>
               </a>
             </div>
-
           <?php endforeach ?>  
         </div>
       </div>
     </div>
 
     <!-- ==================================================================== -->
-    <div class="py-5 site-block-testimonial" style="background-image: url('../assets/image/hero_bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="py-5 site-block-testimonial" style="background-image: url('./assets/image/camera.jpg');" data-stellar-background-ratio="0.5">
      <div class="container">
        <div class="row block-13 mb-5">
          <div class="col-md-12 text-center" data-aos="fade">
            <div class="nonloop-block-13 owl-carousel">
-            <div class="block-testimony">
+           <?php foreach ($testimoni as $key => $value): ?>
+             <div class="block-testimony">
               <p class="small">Testimonial</p>
-              <img src="<?php echo base_url("assets/image/person_1.jpg") ?>" alt="Image" class="img-fluid">
-              <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit dicta repellat, sit aut at nulla quam sed, neque voluptatum deserunt, vero ipsum natus sint culpa illo. Vel, sed, assumenda.&rdquo;</p>
-              <p class="small">&mdash; Marrygrace Woodland</p>
+              <img src="<?php echo base_url("assets/image/blog/woman.png") ?>" alt="Image" class="img-fluid">
+              <p>&ldquo;<?php echo $value['isi_testimoni'] ?>.&rdquo;</p>
+              <p class="small">&mdash; <?php echo $value['nama_member'] ?></p>
             </div>
-            <div class="block-testimony">
-              <p class="small">Testimonial</p>
-              <img src="<?php echo base_url("assets/image/person_2.jpg") ?>" alt="Image" class="img-fluid">
-              <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit dicta repellat, sit aut at nulla quam sed, neque voluptatum deserunt, vero ipsum natus sint culpa illo. Vel, sed, assumenda.&rdquo;</p>
-              <p class="small">&mdash; Jean Doe</p>
-            </div>
-            <div class="block-testimony">
-              <p class="small">Testimonial</p>
-              <img src="<?php echo base_url("assets/image/person_3.jpg") ?>" alt="Image" class="img-fluid">
-              <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit dicta repellat, sit aut at nulla quam sed, neque voluptatum deserunt, vero ipsum natus sint culpa illo. Vel, sed, assumenda.&rdquo;</p>
-              <p class="small">&mdash; Ben Smith</p>
-            </div>
+             
+           <?php endforeach ?>
+          
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
+<!-- 
   <div class="py-3 mb-5 mt-5">
    <div class="container">
      <div class="row">
@@ -136,4 +152,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

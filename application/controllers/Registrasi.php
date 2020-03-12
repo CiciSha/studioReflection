@@ -5,6 +5,9 @@ class Registrasi extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('admin/Mpaket');
+		$data['paket'] = $this->Mpaket->getAllPaket();
+
 		$this->load->model('member/Mmember');
 
 		$input = $this->input->post();
@@ -20,11 +23,9 @@ class Registrasi extends CI_Controller {
 				redirect('login','refresh');	
 			}
 		}
-		$this->load->view('member/template/Header');
+		$this->load->view('member/template/Header',$data);
 		$this->load->view('member/login/Registrasi');
 	}
-
-
 
 }
 

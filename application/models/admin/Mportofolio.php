@@ -24,7 +24,7 @@ class Mportofolio extends CI_Model {
 		{
 			$input['foto'] = $this->upload->data("file_name");
 
-        //  ssimpan data ke db
+        //  simpan data ke db
 			$this->db->insert('portofolio', $input);
 		}
 		else
@@ -66,6 +66,15 @@ class Mportofolio extends CI_Model {
 			$this->db->where('id_portofolio', $id_portofolio);
 			$this->db->update('portofolio', $input);
 		}
+		
+	}
+	function tampil_portofolio_paket($id_paket)
+	{
+		$this->db->join('paket', 'portofolio.id_paket = paket.id_paket', 'left');
+		$this->db->where('portofolio.id_paket', $id_paket);
+		$ambil = $this->db->get('portofolio');
+		return $ambil->result_array();
+
 	}
 	
 }

@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: right !important;">
-<span >Data Paket</span>
-    </div>
-  </div>
+	<span >Data Paket</span>
+</div>
+</div>
 </nav>
 
 <table class="table table-hover" id="thetable">
@@ -18,11 +18,13 @@
 			<tr>
 				<td> <?php echo $key+1; ?></td>
 				<td><?php echo $value ['nama_paket'] ?></td>
-				<td><?php echo $value ['foto_paket']; ?></td>
+				<td class="gambar-paket">
+					<img src="<?php echo base_url("assets/image/paket/$value[foto_paket]") ?>" width="150">
+				</td>
 				<td>
 					<a href="<?php echo base_url("admin/paket/tampil_detail_paket/$value[id_paket]")?>" class="btn btn-info btn-xs">Detail</a>
 					<a href="<?php echo base_url("admin/paket/tampil_edit_paket/$value[id_paket]")?>" class="btn btn-warning btn-xs">Edit</a>
-					<a href="" class="btn btn-danger btn-xs">Hapus</a>
+					<a href="" class="btn btn-danger btn-xs" onclick="return confirm('Apakah Anda Yakin?')">Hapus</a>
 				</td>
 			</tr>
 			

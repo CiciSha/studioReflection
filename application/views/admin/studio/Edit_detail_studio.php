@@ -5,6 +5,21 @@ style="text-align: right !important;">
     </div>
   </div>
 </nav>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+    <li class="breadcrumb-item btn-link">
+        <a href="<?php echo base_url("admin/home")?>">Beranda</a>
+    </li>
+    <li class="breadcrumb-item btn-link">
+        <a href="<?php echo base_url("admin/studio") ?>">Studio</a>
+	</li>
+	<li class="breadcrumb-item btn-link">
+        <a href="<?php echo base_url("admin/studio/tampil_detail_studio/$id_studio") ?>">Detail Studio</a>
+	</li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Detail Studio</li>
+</ol>
+</nav>
+<!-- <pre><?php print_r($detail_studio) ?></pre> -->
 <form method="post"  enctype="multipart/form-data">
 	<div class="form-group">
 		<label>Nama Background</label>

@@ -2,8 +2,10 @@
 body {
   line-height: 1.7;
   color: #4d4d4d;
-  font-weight: 300;
-  font-size: 1rem; }
+  font-weight: 400;
+  font-size: 0.875rem;
+
+}
 
 ::-moz-selection {
   background: #000;
@@ -93,7 +95,7 @@ a {
   font-size: 2.5rem; }
   @media (min-width: 768px) {
     .site-section-heading {
-      font-size: 3rem; } }
+      font-size: 2rem; } }
   .site-section-heading:after {
     content: "";
     left: 0%;
@@ -213,7 +215,7 @@ a {
 .caption {
   text-transform: uppercase;
   font-size: 11px !important;
-  letter-spacing: .2em; }
+  letter-spacing: 2rem; }
 
 /* Navbar */
 .site-navbar {
@@ -250,7 +252,7 @@ a {
         text-transform: uppercase;
         letter-spacing: .1em;
         color: #000;
-        font-size: 12px;
+        font-size: 13px;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
           color: #7971ea; }
@@ -499,7 +501,14 @@ a {
   background-repeat: no-repeat;
   background-position: top;
   background-position: center center; }
+
+  #tentang{
+    min-height: 80px;
+  }
+
+
   .site-blocks-cover.overlay {
+
     position: relative; }
     .site-blocks-cover.overlay:before {
       position: absolute;
@@ -516,18 +525,21 @@ a {
   .site-blocks-cover, .site-blocks-cover .row {
     min-height: 600px;
     height: calc(100vh - 73px); }
+
   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover .row {
     min-height: 600px;
     height: calc(30vh); }
+
   .site-blocks-cover h2, .site-blocks-cover h3, .site-blocks-cover h4, .site-blocks-cover h5 {
     color: #fff; }
+
   .site-blocks-cover h1 {
     font-size: 1.5rem;
     font-weight: 900;
     color: #fff; }
     @media (min-width: 768px) {
-      .site-blocks-cover h1 {
-        font-size: 3rem; } }
+  .site-blocks-cover h1 {
+    font-size: 3rem; } }
   .site-blocks-cover p {
     color: #fff;
     font-size: 1.2rem;
@@ -536,8 +548,8 @@ a {
     font-size: 16px;
     line-height: 1.5; }
   @media (max-width: 991.98px) {
-    .site-blocks-cover .display-1 {
-      font-size: 3rem; } }
+  .site-blocks-cover .display-1 {
+    font-size: 3rem; } }
 
 .site-block-subscribe .btn {
   padding-left: 20px;
@@ -1175,7 +1187,7 @@ a {
   text-align: center; }
   .site-block-profile-pic img {
     border-radius: 50%;
-    max-width: 200px; }
+    max-width: 150px; }
 
 .site-block-half {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
